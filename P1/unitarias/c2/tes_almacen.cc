@@ -13,6 +13,13 @@ public:
   void TearDown(void){
     delete v;
   }
+  void SetUpTestCase()
+  {
+    //general para todos los cases
+  }
+  void TearDownTestCase(){
+
+  }
 
   std::vector<int> * v;
 };
