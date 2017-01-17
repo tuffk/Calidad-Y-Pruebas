@@ -31,4 +31,6 @@ TEST_P(fixValParam, odds){
   }
 }
 
-INSTANTIATE_TEST_CASE_P(vals,fixValParam,testing::Values(2,4,6,8,1,3,5,7,9));
+//INSTANTIATE_TEST_CASE_P(vals,fixValParam,testing::Values(2,4,6,8,1,3,5,7,9));
+
+INSTANTIATE_TEST_CASE_P(vals,fixValParam,testing::Range(1,25,1));

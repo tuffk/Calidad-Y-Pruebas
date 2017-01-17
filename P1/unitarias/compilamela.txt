@@ -1,1 +1,1 @@
-g++ -std=c++11 -I/home/tuff/github/Calidad-Y-Pruebas/googletest/googletest/include/ ../gtest_main.a -lpthread ../gtest_main.a tes_almacen.cc
+g++ -std=c++11 -I/home/tuff/github/Calidad-Y-Pruebas/googletest/googletest/include/ ../gtest_main.a -lpthread tes_almacen.cc
