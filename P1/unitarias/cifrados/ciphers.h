@@ -8,7 +8,13 @@
 
 using namespace std;
 
-class cesar {
+class cifrado{
+  public:
+  virtual string decrypt() = 0;
+
+};
+
+class cesar : public cifrado{
 public:
   cesar(){}
   ~cesar(){}
@@ -32,30 +38,31 @@ public:
 };
 
 
-class vigenere{
+class vigenere : public cifrado{
 public:
   // vigenere();
   // ~vigenere();
 string msg = "IONDVQY DZH QNTY KLQRY BVISEK TYHME JERWLF ZHV YEYOAEW RRBEI WEFZE FI HRGTY EYG UNTH SS GLC WLR COEGIEY TYDX V EEK KEIK HVDVQ OT JHIZY TF PI ZUSK VXEGNXH XUGT DHR FNOLOH SKAI VIRONX WLNZ DVDXU G NVFIFYAIB IAJ WZOP PUMV ZLRT IK ZMYR CFPI";
-  void decrypt(){
+  string decrypt(){
     istringstream ssmsg(msg);
     vector<string> words{istream_iterator<string>{ssmsg}, istream_iterator<string>{}};
     //for_each(words.begin(),words.end(), [=](string w){cout << w << endl;});
+    return "garden";
 
   }
 
 };
 
-int main(void){
-  cesar* c = new cesar();
-  string word;
-  vigenere* v = new vigenere();
-  word = c->decrypt();
+// int main(void){
+//   cesar* c = new cesar();
+//   string word;
+//   vigenere* v = new vigenere();
+//   word = c->decrypt();
 
-  v->decrypt();
+//   v->decrypt();
 
 
-  delete c;
-  delete v;
-  return 0;
-}
+//   delete c;
+//   delete v;
+//   return 0;
+// }
