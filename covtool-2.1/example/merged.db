@@ -1,0 +1,10 @@
+file: /home/tuff/github/Calidad-Y-Pruebas/covtool-2.1/example/program.c 7 7 100
+il:  4 5 7 10 12 15 17 
+el:  4 5 7 10 12 15 17 
+totals: 7 7 100
+dir: /home 7 7 100
+dir: /home/tuff 7 7 100
+dir: /home/tuff/github 7 7 100
+dir: /home/tuff/github/Calidad-Y-Pruebas 7 7 100
+dir: /home/tuff/github/Calidad-Y-Pruebas/covtool-2.1 7 7 100
+dir: /home/tuff/github/Calidad-Y-Pruebas/covtool-2.1/example 7 7 100

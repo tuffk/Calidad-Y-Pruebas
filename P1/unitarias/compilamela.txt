@@ -1,1 +1,3 @@
 g++ -std=c++11 -I/home/tuff/github/Calidad-Y-Pruebas/googletest/googletest/include/ ../gtest_main.a -lpthread tes_almacen.cc
+
+cov++ -g -c program.c && cov++ program.o
