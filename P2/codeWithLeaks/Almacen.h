@@ -2,7 +2,6 @@
 #include<iostream>
 #include<algorithm>
 #include<vector>
-#include "VideoJuego.h"
 using namespace std;
 
 template<class P>
@@ -23,13 +22,13 @@ public:
         array = new Producto*[size];
         current_position = 0;
     }
-    ~Almacen()
-    {
-        for (int i=0; i < current_position; i++)
-        {
-            delete array;
+    ~Almacen(){
+        for (int i = 0; i < current_position; ++i){
+            //eliminar(array[i]);
+            //delete array[i];
         }
-        delete  [] array;
+        delete [] array;
+        //free(array);
     }
     void add(Producto* p)
     {
@@ -43,7 +42,7 @@ public:
     }
     void eliminar(Producto* p)
     {
-        
+        delete p;
     }
     void print()
     {

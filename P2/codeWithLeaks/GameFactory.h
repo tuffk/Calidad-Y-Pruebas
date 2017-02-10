@@ -8,7 +8,7 @@ using namespace std;
 class GameFactory
 {
 protected:
-    VideoJuego* v;
+    //VideoJuego* v;
     void conception(){ cout << "en concepcion" << endl; }
     void disenio(){ cout << "en disenio" << endl; }
     void planificacion(){ cout << "en planificacion" << endl; }
