@@ -14,7 +14,16 @@ public:
     : nombre(new string(nombre)), num_serie(new int(num_serie)), tipo_juego(new tipo(tipo_juego))
     {
     }
-    
+    VideoJuego(const VideoJuego & old)
+    {
+        this->nombre = new string();
+        *(this->nombre) = *(old.nombre);
+        this->num_serie = new int();
+        *(this->num_serie)= *(old.num_serie);
+        this->tipo_juego = new tipo();
+        *(this->tipo_juego)=*(old.tipo_juego);
+
+    }
     string getName()
     {
         return *nombre;
@@ -41,6 +50,11 @@ public:
         this->num_serie = new int(num_serie);
         this->tipo_juego = new VideoJuego::tipo(tipo_juego);
         this->number_of_players = new int(number_of_players);
+    }
+    Estrategia(const Estrategia& old)
+    {
+        this ->number_of_players = new int();
+        *(this->number_of_players) = *(old.number_of_players);
     }
 
     ~Estrategia()
