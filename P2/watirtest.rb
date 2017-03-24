@@ -17,8 +17,33 @@ browser.textarea(:id => 'entry_1000001').set zain
 browser.textarea(:css => 'textarea[name="entry.1000001"]').clear
 
 browser.element(:xpath => '//textarea[@name="entry.1000001"]').send_keys "hola mac apesta"
-#set ({"text" => "hola"})
 
+kuz = browser.radios(:id => /group_1000006/)
+
+kuz2 = kuz.map do |i|
+    i.value
+end
+puts kuz2.length
+
+browser.radio(:id => /group_1000002_1/).click
+
+ariel = browser.checkboxes(:id => /group_1000003/)
+#puts ariel
+
+ariel.map do |p|
+    if p.value.include? 'y'
+        p.click
+    end
+end
+#browser.checkbox(:id => /group_1000003_1/).click
+
+browser.select_list(:id => 'entry_1000004').select("Firefox")
+
+browser.radio(:id => 'group_1000005_5').click
+browser.radio(:id => 'group_1000006_5').click
+browser.radio(:id => 'group_1000007_5').click
+sleep(3)
+browser.button(:id => 'ss-submit').click
 
 sleep(1)
 browser.close
