@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
+  <hashTree>
+    <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="true">
+      <stringProp name="filename"></stringProp>
+      <stringProp name="parameters"></stringProp>
+      <boolProp name="resetInterpreter">false</boolProp>
+      <stringProp name="script">int num = ctx.getThreadNum();
+String[] arr = {&quot;MXN&quot;,&quot;USD&quot;,&quot;EUR&quot;,&quot;AUD&quot;,&quot;BGN&quot;,&quot;BRL&quot;,&quot;CAD&quot;,&quot;CHF&quot;,&quot;CNY&quot;,&quot;CZK&quot;,&quot;DKK&quot;,&quot;GBP&quot;,&quot;HKD&quot;,&quot;HRK&quot;,&quot;HUF&quot;,&quot;IDR&quot;,&quot;ILS&quot;,&quot;INR&quot;,&quot;JPY&quot;,&quot;KRW&quot;,&quot;ZAR&quot;};
+vars.put(&quot;currency&quot;,arr[num]);
+
+</stringProp>
+    </BeanShellPreProcessor>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
